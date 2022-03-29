@@ -1,0 +1,281 @@
+:root{
+    --red:#EE3623;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    border: none; outline:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 400;
+    transition:.2s linear;
+}
+
+*::selection{
+    background: var(--red);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+}
+.btn{
+    height: 3.5rem;
+    width: 12rem;
+    background: var(--red);
+    color: #fff;
+    border-radius: 3.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 1rem 0;
+    box-shadow: 0 .3rem .5rem var(--red);
+    opacity: .7;
+}
+.btn:hover{
+    opacity: 1;
+
+}
+.heading{
+    text-align: center;
+    padding: 5rem 1rem;
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    color: var(--red);
+    text-transform: uppercase;
+}
+.titel{
+    text-align: center;
+    padding: 0rem 1rem;
+    font-size: 3.5rem;
+    color: #666;
+    font-weight: 300;   
+    }
+.nav-toggle{
+    transform: translateX(-30rem);
+}
+
+header .menu{
+    position: fixed;
+    top: 1.5rem; right: 2rem;
+    font-size: 3.5rem;
+    color: var(--red);
+    background: #fff;
+    box-shadow: 0.1rem  .3rem rgba(0,0,0,.3);
+    padding: .3rem 1.4rem;
+    cursor: pointer;
+    z-index: 1000;
+    overflow: hidden;
+
+}
+header .navbar{
+    height: 100vh;
+    width: 30rem;
+    position: fixed;
+    top: 0; right: 0;
+    background: #111;
+    display: none;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    height: 100%;
+    list-style: none;
+
+}
+
+header .navbar ul li{
+    margin: 1.4rem;
+    animation: fadeIn .2s linear backwards;
+    animation-delay: calc(.3s * var(--i));
+}
+@keyframes fadeIn{
+    0%{
+        transform: translateY(-8rem);
+        opacity: 0;
+    }
+}
+
+    
+
+
+
+header .navbar ul li a{
+    font-size: 3rem;
+    color: #fff;
+
+}
+
+header .navbar ul li a:hover{
+    color: var(--red);
+}
+
+.fa-times{
+    transform: rotate(180deg) skew(-180deg);
+}
+
+.home{
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+}
+
+.home .video-container video{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+
+}
+
+.home .content{
+    min-height: 100vh;
+    width: 45rem;
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(.5rem);
+    text-align: center;
+    padding: 2rem 3rem;
+
+
+}
+
+.home .content h1{
+    font-size: 4rem;
+    padding-top: 4vh;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.home .content h3{
+    font-size: 3rem;
+    color: #eee;
+    font-weight: lighter;
+    
+}
+.home .content .from-container form{
+    width: 100%;
+    background: #fff;
+    padding: 1rem ;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+
+}
+
+.home .content .from-container form h3{
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    color: #333;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.home .content .from-container form span{
+    font-size: 2rem;
+    display: block;
+    padding: 1.3rem;
+    color: var(--red);
+    text-align: left;
+}
+
+.home .content .from-container form input{
+    height: 3rem;
+    width: 80%;
+    padding: 0 1rem;
+    font-size: 1rem;
+    background: #eee;
+}
+
+.home .content .from-container form .btn{
+    width: 12rem;
+    background-color: var(--red);
+    margin: 1.5rem;
+}
+
+.feature{
+    background: #2c3A47;
+}
+
+.feature .titel{
+    color: #eee;
+}
+
+.feature .card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.feature .card-container .card{
+    height: 45rem;
+    width: 30rem;
+    margin: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.feature .card-container .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.feature .card-container .card .info{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0; left: 0;
+    background: linear-gradient(transparent, #000);
+    padding: 0 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+
+@media (max-width:500px){
+    html{
+        font-size: 40%;
+    }
+    .home .content{
+        width: 100%;
+    }
+}
+
+
+
+
+
